@@ -1,12 +1,13 @@
-public class Greeter
+public class Hello
 {
-    String who;
-    Greeter(String who)
+    public static void main( String argv[] )
     {
-        this.who = who;
-    }
-    String greet()
-    {
-        return "Hello, " + who;
+        String name = "World"; // Default is "World"
+        if ( argv.length != 0 )
+        {
+             name = argv[0];
+        }
+        Greeter greeter = new Greeter(name);
+        System.out.println(greeter.greet());
     }
 }
